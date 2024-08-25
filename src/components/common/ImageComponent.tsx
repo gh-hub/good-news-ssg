@@ -24,7 +24,7 @@ const ImageComponent: React.FC<ImageComponentProps> = ({ url, title }) => {
         className={`rounded-md transition-opacity duration-300 ${
           isLoading ? "opacity-0" : "opacity-100"
         }`}
-        // onLoad={() => setIsLoading(false)}
+        // onLoad={() => setIsLoading(false)} // TODO need to fix
       />
     </div>
   );

@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    reactStrictMode: true,
-    swcMinify: true,
-    images: {
-      domains: [`${process.env.DOMAIN}`,'goodnews2day.net']
-    },
+  i18n: {
+    locales: ['he'], // Hebrew locale
+    defaultLocale: 'he', // Set Hebrew as the default language
+    localeDetection: false, // Disable automatic locale detection
+  },
+  reactStrictMode: true,
+  images: {
+    domains: ['goodnews2day.net']
+  },
 };
 
 export default nextConfig;
