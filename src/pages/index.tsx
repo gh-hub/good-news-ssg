@@ -40,7 +40,15 @@ export const getStaticProps = async () => {
     };
   } catch (error) {
     console.error("Error fetching data:", error);
-    return null;
+    return {
+      props: {
+        data: {
+          news: {
+            data: [],
+          },
+        },
+      },
+    };
   }
 };
 
