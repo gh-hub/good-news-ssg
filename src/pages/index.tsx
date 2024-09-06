@@ -23,7 +23,7 @@ export default function Home({ newsItems }: HomeProps) {
 // Fetch data at build time for SSG
 export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/news?populate%5B0%5D=mediaLinks`
+    `${process.env.STRAPI_API_URL}/news?populate%5B0%5D=mediaLinks`
   );
   const newsData = await res.json();
   console.log(JSON.stringify(newsData));
