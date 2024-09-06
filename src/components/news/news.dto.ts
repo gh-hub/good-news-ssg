@@ -1,37 +1,22 @@
-type MediaType = "VIDEO" | "IMAGE";
-
-interface MediaAttributes {
-  url: string;
+export interface MediaLinkDto {
+  id: number;
   title: string;
-  type: MediaType;
+  description: string | null;
+  url: string;
+  type: string; // 'IMAGE' or 'VIDEO'
 }
 
-interface MediaLink {
-  attributes: MediaAttributes;
-}
-
-interface MediaLinks {
-  data: MediaLink[];
-}
-
-interface NewsAttributes {
+export interface NewsAttributesDto {
   title: string;
   description: string;
-  media_links: MediaLinks;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  slug: string | null;
+  mediaLinks: MediaLinkDto[];
 }
 
-interface NewsItem {
-  attributes: NewsAttributes;
-}
-
-// interface NewsData {
-//   data: NewsItem[];
-// }
-
-// interface News {
-//   data: NewsItem[];
-// }
-
-interface NewsApiResponse {
-  news: { data: NewsItem[] };
+export interface NewsItemDto {
+  id: number;
+  attributes: NewsAttributesDto;
 }

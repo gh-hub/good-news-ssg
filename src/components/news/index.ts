@@ -1,4 +1,4 @@
 import News from "./components/News";
-import NewsItem from "./components/NewsItem";
-export { NewsItem };
+import NewsItemDto from "./components/NewsItem";
+export { NewsItemDto as NewsItem };
 export default News;
