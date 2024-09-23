@@ -7,7 +7,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   images: {
-    domains: ['goodnews2day.net']
+    domains: ['goodnews2day.net','res.cloudinary.com']
   },
 };
 
